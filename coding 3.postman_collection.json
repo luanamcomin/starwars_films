@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "3100ff57-9f9d-4de0-b3db-07f61ccad79f",
+		"name": "coding 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27557028"
+	},
+	"item": [
+		{
+			"name": "starwars_list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "starwars_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Solo: A Star Wars Story\",\n    \"description\": \"During an adventure in the criminal underworld, Han Solo meets his future co-pilot Chewbacca and Lando Calrissian years before joining the Rebel Alliance.\",\n    \"image_url\": \"https://m.media-amazon.com/images/M/MV5BOTM2NTI3NTc3Nl5BMl5BanBnXkFtZTgwNzM1OTQyNTM@._V1_.jpg\",\n    \"trailer_url\": \"https://youtube.com/watch?v=jPEYpryMp2s\",\n    \"year\": 2018\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "starwars_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/66f44411925533b5cec23dde",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"66f44411925533b5cec23dde"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "starwars_update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Solo\",\n    \"description\": \"During an adventure in the criminal underworld, Han Solo meets his future co-pilot Chewbacca and Lando Calrissian years before joining the Rebel Alliance.\",\n    \"image_url\": \"https://m.media-amazon.com/images/M/MV5BOTM2NTI3NTc3Nl5BMl5BanBnXkFtZTgwNzM1OTQyNTM@._V1_.jpg\",\n    \"trailer_url\": \"https://youtube.com/watch?v=jPEYpryMp2s\",\n    \"year\": 2018\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/66f447172af325c53c74c314",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"66f447172af325c53c74c314"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "starwars_register_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Ashoka\",\n  \"password\": \"bestpadawan\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "starwars_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Ashoka\",\n  \"password\": \"bestpadawan\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "starwars_create_film",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjQ0YTc2Yzg5ODU4NDE2MjRiMjU4YyIsImlhdCI6MTcyNzI4NTg3OSwiZXhwIjoxNzI3Mjg5NDc5fQ.HUh-jX4ZS_6ZQgeTw1EshM0FvSpxBqG9zMQ3Pue9xtY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Star Wars: The Clone Wars (TV series)\",\n  \"description\": \"The Clone Wars is set during the Star Wars prequel trilogy era, taking place over a span of three years in between the films Attack of the Clones and Revenge of the Sith. The protagonists comprise returning characters from the films, including Anakin Skywalker, Obi-Wan Kenobi, Padmé Amidala, Yoda, and Mace Windu, as well as new characters created specifically for the series, such as Anakin's Padawan Ahsoka Tano and clone Captain Rex of the 501st Legion.\",\n  \"image_url\": \"https://m.media-amazon.com/images/M/MV5BOTdiODQ1MDYtZjM5My00MmQ5LTk1ZWUtZWIwYjBhZGMxZDAyXkEyXkFqcGc@._V1_.jpg\",\n  \"trailer_url\": \"https://www.youtube.com/watch?v=ZLW2jkd6E7g\",\n  \"year\": 2008\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/films",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"films"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
